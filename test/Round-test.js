@@ -42,8 +42,6 @@ describe('Round', function() {
             "answers": ["object", "array", "function"],
             "correctAnswer": "object"
         });
-        //take turn
-        //return next card
     });
 
     it('should take a turn when a guess is made', function() {
@@ -79,11 +77,10 @@ describe('Round', function() {
         expect(newRound.currentTurn.correct).to.equal(false);
     });
     it('should collect the ids of any questions answered incorrectly', function() {
-        const guess = 2;
 
-        newRound.takeTurn(guess)
-        newRound.takeTurn(guess)
-        newRound.takeTurn(guess)
+        newRound.takeTurn(2)
+        newRound.takeTurn(1)
+        newRound.takeTurn(2)
 
         expect(newRound.wrongAnswers).to.deep.equal([1, 3]);
     });

@@ -16,8 +16,6 @@ class Round {
         this.currentCard = this.deck.cards.find(card => card.id === this.turns);
         this.currentTurn = new Turn(guess, this.currentCard);
         this.currentTurn.evaluateGuess();
-        console.log(this.currentTurn.evaluateGuess());
-        console.log(this.currentTurn.correct)
         if(!this.currentTurn.correct) {
             this.wrongAnswers.push(this.currentCard.id)
         }
