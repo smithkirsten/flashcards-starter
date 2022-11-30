@@ -26,7 +26,7 @@ class Game {
   }
 
   printMessage(deck, round) {
-    console.log(`Welcome to FlashCards! You are playing with ${this.currentRound.deck.cardCount()} cards.
+    console.log(`Welcome to FlashCards! You are playing with ${this.currentRound.deck.countCards()} cards.
 -----------------------------------------------------------------------`)
   }
 
@@ -38,7 +38,7 @@ class Game {
     this.newRound();
     this.printMessage(this.currentRound.deck, this.currentRound);
     this.printQuestion(this.currentRound);
-    this.takeTurn();
+    this.currentRound.takeTurn();
   }
 }
 
