@@ -104,7 +104,4 @@ describe('Round', function() {
 
         expect(newRound.endRound()).to.equal('** Round over! ** You answered 30% of the questions correctly!');
     });
-    // it('', function() {
-    //     expect().to.deep.equal();
-    // });
 });
