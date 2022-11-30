@@ -11,7 +11,10 @@ class Turn {
         return this.card;
     }
     evaluateGuess() {
-        if(this.guess === this.card.correctAnswer) {
+        let correctNumber = this.card.answers.indexOf(this.card.answers.find(answer => answer === this.card.correctAnswer)) + 1;
+        console.log('Correct: ', correctNumber)
+        console.log('Guess: ', this.guess)
+        if(this.guess === correctNumber) {
             this.correct = true;
             return this.correct;
         }
