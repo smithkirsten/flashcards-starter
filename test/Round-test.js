@@ -69,8 +69,8 @@ describe('Round', function() {
     });
 
     it('should evaluate the guess and record any incorrect guesses on each turn', function() {
-        const guess1 = 'object';
-        const guess2 = 'function';
+        const guess1 = 1;
+        const guess2 = 3;
         
         expect(newRound.takeTurn(guess1)).to.equal('correct!');
         expect(newRound.currentTurn.correct).to.equal(true);
@@ -79,7 +79,7 @@ describe('Round', function() {
         expect(newRound.currentTurn.correct).to.equal(false);
     });
     it('should collect the ids of any questions answered incorrectly', function() {
-        const guess = 'array';
+        const guess = 2;
 
         newRound.takeTurn(guess)
         newRound.takeTurn(guess)
@@ -90,18 +90,18 @@ describe('Round', function() {
 
     it('should calculate the percentage of correct guesses', function () {
         
-        newRound.takeTurn('object');
-        newRound.takeTurn('array');
-        newRound.takeTurn('grass');
+        newRound.takeTurn(2);
+        newRound.takeTurn(1);
+        newRound.takeTurn(3);
 
 
-        expect(newRound.calculatePercentCorrect()).to.equal('30%');
+        expect(newRound.calculatePercentCorrect()).to.equal('33%');
     })
     it('should tell the user their percentage of correct answers at the end of the game', function (){
-        newRound.takeTurn('object');
-        newRound.takeTurn('array');
-        newRound.takeTurn('grass');
+        newRound.takeTurn(1);
+        newRound.takeTurn(1);
+        newRound.takeTurn(2);
 
-        expect(newRound.endRound()).to.equal('** Round over! ** You answered 30% of the questions correctly!');
+        expect(newRound.endRound()).to.equal('** Round over! ** You answered 67% of the questions correctly!');
     });
 });

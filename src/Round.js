@@ -16,14 +16,16 @@ class Round {
         this.currentCard = this.deck.cards.find(card => card.id === this.turns);
         this.currentTurn = new Turn(guess, this.currentCard);
         this.currentTurn.evaluateGuess();
+        console.log(this.currentTurn.evaluateGuess());
+        console.log(this.currentTurn.correct)
         if(!this.currentTurn.correct) {
             this.wrongAnswers.push(this.currentCard.id)
         }
         return this.currentTurn.giveFeedback();
     }
     calculatePercentCorrect() {
-        let decimal = (this.deck.cards.length / this.wrongAnswers.length).toFixed(2)
-        return `${decimal * 10}%`;
+        let decimal = ((this.deck.cards.length - this.wrongAnswers.length) / this.deck.cards.length).toFixed(2)
+        return `${decimal * 100}%`;
     }
     endRound() {
         return `** Round over! ** You answered ${this.calculatePercentCorrect()} of the questions correctly!`
