@@ -4,12 +4,15 @@ class Turn {
         this.card = card;
         this.correct;
     }
+
     returnGuess() {
         return this.guess;
     }
+
     returnCard() {
         return this.card;
     }
+
     evaluateGuess() {
         if(this.guess === this.card.correctAnswer) {
             this.correct = true;
@@ -18,6 +21,7 @@ class Turn {
         this.correct = false; 
         return this.correct;
     }
+    
     giveFeedback() {
         if(this.correct) {
             return 'correct!';
