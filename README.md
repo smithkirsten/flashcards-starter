@@ -1,71 +1,33 @@
-# FlashCards Starter Kit
+**Abstract:**
 
-## Fork This Repo
+Test your knowledge of complex datatypes, iterators, and prototypes in this rousing game of flashcards!
+The user is given 30 multiple choice or T/F questions to answer about Mod 2 core concepts. The questions are presented one at a time and the 
+user answer is evaluated immediately. At the end of the game, the user is presented with their score as a percentage and the game exits. To play again, the user must re-run the game.
 
-On the top right corner of this page, click the **Fork** button.
+**Preview of App:**
+![flashcards preview](./assets/flashcards.gif)
 
-## Setup
+**Installation Instructions:**
 
-Clone down the forked repo (from your GitHub). Since you don't want to name your project "flashcards-starter", you can use an optional argument when you run `git clone` (you replace the `[...]` with the terminal command arguments):
+Clone down the repo onto a local device.
+Once you have cloned the repo, change into the directory and run:
+`node index.js` from the root to begin the game in the terminal.
 
-```bash
-git clone [remote-address] [what you want to name the repo]
-```
+**Context:**
+This is the first project of Mod 2 and was completed in 3 days during the first week.
 
-Once you have cloned the repo, change into the directory and install the library dependencies. Run:
+**Contributors:**
+Kirsten Smith:
+[GitHub](https://github.com/smithkirsten) 
+[LinkedIn](https://www.linkedin.com/in/kirsten-stamm-smith/)
 
-```bash
-npm install
-```
+**Learning Goals:**
++ Contribute code to an partially constructed object-oriented application
++ Follow spec/prompts to make a working application
++ Implement ES6 classes
++ Write modular, reusable code that follows SRP (Single Responsibility Principle)
++ Implement a robust testing suite using TDD
 
-To verify that it is setup correctly, run `npm test` in your terminal. You should have 5 pending tests in your `Card` test file that show up.
-
-Running `node index.js` from the root of your project should result in the following message being displayed in your terminal: 
-
-```bash
-Your project is running...
-```
-
-*Note that you will not need to you run your server until you are instantiating your `Game` class in Iteration 3. Prior to that, you should be using TDD to drive your code. You should check the functionality of your application by running your tests via `npm test`.*
-
-
-## Where to Add Your Code
-
-### JavaScript
-
-**Create all of your feature code files in the `src` directory.**
-
-We will be using the `module.exports` and `require` syntax to share code across files.
-
-## How to View Your Code in Action
-
-Once you are working through Iteration 3, you will want to start your server to test your functionality.
-In the terminal, run:
-
-```bash
-node index.js
-```
-
-When the game is functioning appropriately, you will be prompted for each question, have the opportunity to select an answer, and will be given feedback. You will be able to play through the entire deck of cards:
-
-![flash cards example gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
-
----
-
-## Test Files Organization
-
-Similar to feature code, your test code needs to be put in a specific place for it to run successfully.
-
-**Put all of your test files in the `test` directory.** As a convention, all test filenames should end with `-test.js`. For instance: `Round-test.js`.
-
-## Running Your Tests
-
-Run your test suite using the command:
-
-```bash
-npm test
-```
-
-The test results will output to the terminal.
-
+**Wins & Challenges:**
+I really enjoyed writing my own tests and experiencing how it helped me organize my code! It was challenging to only be able to test my work though my tests until the last phase of the project and to see the gaps that we can leave in tests, as developers (just because something passes a unit test, doesn't mean it works the way we think it will in the program!). The trickiest part for me was determining the order to call methods and instantiate objects in the ```takeTurn()``` method. I spent a while tracing when to change the current card such that it would both instantiate the turn correctly and evaluate correctly.
 
