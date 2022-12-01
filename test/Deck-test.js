@@ -8,16 +8,18 @@ describe('Deck', function() {
     let cardsArray;
     let newDeck;
     beforeEach(function() {
-
         cardsArray = [new Card(prototypeData[0]), new Card(prototypeData[1]), new Card(prototypeData[2])];
         newDeck = new Deck(cardsArray);
     });
+
     it('should be a function', function() {
         expect(Deck).to.be.a('function');
     });
+
     it('should instantiate a new Deck', function() {
         expect(newDeck).to.be.an.instanceof(Deck);
     }); 
+
     it('should contain an array of different card objects', function() {
         expect(newDeck.cards).to.deep.equal([{
             "id": 1,
@@ -36,6 +38,7 @@ describe('Deck', function() {
             "correctAnswer": "mutator method"
             }]);
         });
+        
         it('should count the cards in the deck', function() {
             expect(newDeck.countCards()).to.equal(3);
         });

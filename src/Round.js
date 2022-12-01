@@ -8,9 +8,11 @@ class Round {
         this.currentTurn;
         this.wrongAnswers = [];
     }
+
     returnCurrentCard() {
         return this.currentCard;
     }
+
     takeTurn(guess) {
         this.turns++;
         this.currentTurn = new Turn(guess, this.currentCard);
@@ -21,10 +23,12 @@ class Round {
         }
         return this.currentTurn.giveFeedback();
     }
+
     calculatePercentCorrect() {
         let decimal = (this.deck.cards.length / this.wrongAnswers.length).toFixed(2)
         return `${decimal * 10}%`;
     }
+    
     endRound() {
         console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()} of the questions correctly!`)
     }
