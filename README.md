@@ -16,10 +16,19 @@ Once you have cloned the repo, change into the directory and run:
 **Context:**
 This is the first project of Mod 2 and was completed in 3 days during the first week.
 
+**Technologies Used:**
+Javascript
+npm
+Mocha
+Chai
+
 **Contributors:**
 Kirsten Smith:
 [GitHub](https://github.com/smithkirsten) 
 [LinkedIn](https://www.linkedin.com/in/kirsten-stamm-smith/)
+
+**Planning Board:**
+![Screen Shot 2022-12-01 at 5 34 26 PM](https://user-images.githubusercontent.com/101011015/205173612-7d6eee99-c122-4af2-b460-0f437092382a.png)
 
 **Learning Goals:**
 + Contribute code to an partially constructed object-oriented application
