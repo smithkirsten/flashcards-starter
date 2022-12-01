@@ -17,10 +17,10 @@ Once you have cloned the repo, change into the directory and run:
 This is the first project of Mod 2 and was completed in 3 days during the first week.
 
 **Technologies Used:**
-Javascript
-npm
-Mocha
-Chai
++ Javascript
++ npm
++ Mocha
++ Chai
 
 **Contributors:**
 Kirsten Smith:
