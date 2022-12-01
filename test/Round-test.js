@@ -97,11 +97,4 @@ describe('Round', function() {
 
         expect(newRound.calculatePercentCorrect()).to.equal('30%');
     })
-    it('should tell the user their percentage of correct answers at the end of the game', function (){
-        newRound.takeTurn('object');
-        newRound.takeTurn('array');
-        newRound.takeTurn('grass');
-
-        expect(newRound.endRound()).to.equal('** Round over! ** You answered 30% of the questions correctly!');
-    });
 });

@@ -38,7 +38,6 @@ class Game {
     this.newRound();
     this.printMessage(this.currentRound.deck, this.currentRound);
     this.printQuestion(this.currentRound);
-    this.currentRound.takeTurn();
   }
 }
 
