@@ -13,11 +13,11 @@ class Round {
     }
     takeTurn(guess) {
         this.turns++;
-        this.currentCard = this.deck.cards.find(card => card.id === this.turns);
         this.currentTurn = new Turn(guess, this.currentCard);
+        this.currentCard = this.deck.cards[this.turns];
         this.currentTurn.evaluateGuess();
         if(!this.currentTurn.correct) {
-            this.wrongAnswers.push(this.currentCard.id)
+            this.wrongAnswers.push(this.currentTurn.card.id)
         }
         return this.currentTurn.giveFeedback();
     }
@@ -26,7 +26,7 @@ class Round {
         return `${decimal * 10}%`;
     }
     endRound() {
-        return `** Round over! ** You answered ${this.calculatePercentCorrect()} of the questions correctly!`
+        console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()} of the questions correctly!`)
     }
 }
 
